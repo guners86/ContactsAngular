@@ -1,0 +1,29 @@
+<div class="NewContactForm">	
+	<h1>Nuevo Contacto</h1>
+
+	<form name="form" ng-submit="form.$valid && modelContat.addContact()" novalidate>
+		<div class="form-group" ng-class="{'has-error': form.name.$invalid && (form.name.$touched || form.$submitted)}">
+			<label for="name">Nombre</label>
+	    	<input type="text" class="form-control" id="name" name="name" placeholder="Introduce tu Nombre" ng-model="modelContat.contact.Name" required>
+	    	<span class="help-block" ng-show="form.name.$error.required && (form.name.$touched || form.$submitted)">Ingresa un Usuario!</span>
+		</div>
+		<div class="form-group" ng-class="{'has-error': form.email.$invalid && (form.email.$touched || form.$submitted)}">
+			<label for="email">Email</label>
+	    	<input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu Email" ng-model="modelContat.contact.Email" required>
+	    	<span class="help-block" ng-show="form.email.$error.required && (form.email.$touched || form.$submitted)">Ingresa un Email!</span>
+		</div>
+		<div class="form-group" ng-class="{'has-error': form.phone.$invalid && (form.phone.$touched || form.$submitted)}">
+			<label for="phone">Telefono</label>
+	    	<input type="text" class="form-control" id="phone" name="phone" placeholder="Introduce un Telefono" ng-model="modelContat.contact.Phone" required>
+	    	<span class="help-block" ng-show="form.phone.$error.required && (form.phone.$touched || form.$submitted)">Ingresa un Telefono!</span>
+		</div>
+		<div class="form-group">
+			<label for="notas">Notas</label>
+	    	<textarea class="form-control" rows="3" id="notas" ng-model="modelContat.contact.Notes"></textarea>
+		</div>
+		<div class="pull-right">
+			<button type="submit" class="btn btn-success">Guardar</button>
+			<button type="submit" class="btn btn-default" ng-click="modelContat.cancelar()">Cancelar</button>
+		</div>
+	</form>
+</div>

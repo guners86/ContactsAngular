@@ -1,0 +1,11 @@
+<div class="head">
+	<h2>Lista de Contactos</h2>	
+	<a href="#/new"><span class="glyphicon glyphicon-plus" aria-hidden="true">Nuevo</span></a>
+</div>
+
+<div class="alert alert-success" ng-repeat="contact in modelContats.contacts">
+	<a href="#/contact/{{contact.$id}}">{{contact.Name}}</a></br>
+	<span class="glyphicon glyphicon-envelope" aria-hidden="true">{{contact.Email}}</span>
+	<span class="glyphicon glyphicon-phone" aria-hidden="true">{{contact.Phone}}</span>
+</div>
+

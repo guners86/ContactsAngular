@@ -1,0 +1,20 @@
+<div class="contact">
+	<div class="panel panel-success"> 
+		<div class="panel-heading"> 
+			<h2>{{modelContat.contact.Name}}</h2>
+		</div>
+		<div class="panel-body"> 
+			<div class="datosContacto">
+				<span class="glyphicon glyphicon-envelope" aria-hidden="true">{{modelContat.contact.Email}}</span>
+				<span class="glyphicon glyphicon-phone" aria-hidden="true">{{modelContat.contact.Phone}}</span>
+			</div>			
+			<h4>Notas:</h4>
+			<p class="text-justify">{{modelContat.contact.Notes}}</p>			
+			<div class="opciones">
+				<a href="#/"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true">Volver</span></a>				
+				<a href="" ng-click="modelContat.showModal()"><span class="glyphicon glyphicon-trash" aria-hidden="true">Eliminar</span></a>	
+				<a href="#/edit/{{modelContat.contact.$id}}"><span class="glyphicon glyphicon-edit" aria-hidden="true">Editar</span></a>
+			</div>						
+		</div> 
+	</div>
+</div>
